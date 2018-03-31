@@ -83,8 +83,6 @@ memoryManager::memoryManager(string algorithmInput, int pages) {
 
 }
 
-//I'm sorry, I didn't know how to do this part and god knows we weren't taught. I used stack overflow. I understand it
-//and will be able to implement it in the future. Isn't that the point?
 typedef pair<Node<chunk> *, int> MyPairType;
 struct comparer {
     bool operator()(const MyPairType &left, const MyPairType &right) const {
@@ -137,7 +135,6 @@ void memoryManager::programAdder(string name, int size) {
     Node<allocatedChunk> *newNode = nullptr;
     Node<chunk> *selectedNode = nullptr;
 
-    //Second part of what I used stackoverflow for. I felt like I should site it. It's just an algorithm
     if (this->algorithm == "Best") {
         pair<Node<chunk> *, int> min;
         min = *min_element(freeChunks.begin(), freeChunks.end(), comparer());
